@@ -1,0 +1,52 @@
+/* ========================
+   CLIENT DETAIL PAGE - AJUSTES ESPECÍFICOS
+   ======================== */
+
+ /* client-detail.page.scss */
+ion-content {
+  display: flex;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  height: 100%;
+  --padding-top: 0;        /* elimina padding por defecto */
+  --padding-bottom: 0;
+}
+
+/* Contenedor centrado vertical y horizontal */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  gap: 24px;
+  padding: 16px;
+
+  /* Esto es lo importante: ocupar toda la altura del ion-content */
+  min-height: 100%;
+  height: 100%;
+}
+
+/* Título centrado */
+.detail-container h2 {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  text-align: center;
+}
+
+/* Botón Back */
+.back-button {
+  --border-radius: var(--border-radius-base);
+  --background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  min-width: 150px;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover-default);
+  --background: var(--color-primary-light);
+}

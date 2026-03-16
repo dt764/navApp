@@ -1,0 +1,32 @@
+<ion-header translucent="true">
+  <ion-toolbar class="gradient-header">
+    <ion-title>Clients</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="options-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content">
+
+  <div class="clients-list">
+    @for (client of clients; track client.id) {
+      <ion-card class="client-card" [routerLink]="['/tabs/clients', client.id]">
+        <div class="card-content">
+          <ion-avatar>
+            <img [src]="'https://i.pravatar.cc/150?img=' + client.id" [alt]="client.name">
+          </ion-avatar>
+          <div class="client-info">
+            <h2>{{ client.name }}</h2>
+            <p>Last contact: {{ client.lastContact }}</p>
+          </div>
+          <ion-icon name="chevron-forward-outline" class="forward-icon"></ion-icon>
+        </div>
+      </ion-card>
+    }
+    
+  </div>
+
+</ion-content>
