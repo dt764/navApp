@@ -18,9 +18,5 @@ export const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
   },
-  {
-    path: 'create-reservation',
-    loadComponent: () => import('./create-reservation/create-reservation.page').then( m => m.CreateReservationPage)
-  }
 
 ];
